@@ -1,0 +1,135 @@
+/* body { margin: 0; background: #111; color: white; font-family: Arial, sans-serif; } */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background: #111;
+}
+.nav a {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:hover { text-decoration: underline; }
+
+.menu, .admin-page { padding: 30px; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Menu Cards */
+.menu-card {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.menu-card:hover { transform: scale(1.03); }
+.menu-card img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; }
+.menu-card h3 { margin: 10px 0 5px; }
+.price { color: #ff7a00; font-weight: bold; }
+
+/* Admin Form */
+.admin-form {
+  background: #1c1c1c;
+  padding: 25px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+.admin-form input, .admin-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+}
+.admin-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7a00;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.admin-form button:hover {
+  background: #e06a00;
+  transform: scale(1.05);
+}
+
+/* Admin Actions (Edit/Delete) */
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.admin-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.admin-actions button:hover { transform: scale(1.1); }
+.admin-actions .delete { background: crimson; color: white; }
+.admin-actions .edit { background: #ff7a00; color: white; }
+
+.cancel {
+  background: gray;
+  color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* Search & Filter Buttons */
+.search {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 25px;
+  border: none;
+}
+.menu-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.menu-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #ff7a00;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.menu-buttons button:hover { transform: scale(1.05); }
